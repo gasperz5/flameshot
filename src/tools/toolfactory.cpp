@@ -7,6 +7,7 @@
 #include "circle/circletool.h"
 #include "circlecount/circlecounttool.h"
 #include "copy/copytool.h"
+#include "copy/copytranslatetool.h"
 #include "exit/exittool.h"
 #include "imgupload/imguploadertool.h"
 #include "invert/inverttool.h"
@@ -50,6 +51,7 @@ CaptureTool* ToolFactory::CreateTool(CaptureTool::Type t, QObject* parent)
         if_TYPE_return_TOOL(TYPE_SAVE, SaveTool);
         if_TYPE_return_TOOL(TYPE_EXIT, ExitTool);
         if_TYPE_return_TOOL(TYPE_IMAGEUPLOADER, ImgUploaderTool);
+        if_TYPE_return_TOOL(TYPE_COPYTRANSLATE, CopyTranslateTool);
 #if !defined(Q_OS_MACOS)
         if_TYPE_return_TOOL(TYPE_OPEN_APP, AppLauncher);
 #endif

@@ -88,7 +88,7 @@ static QMap<class QString, QSharedPointer<ValueHandler>>
 #if !defined(Q_OS_WIN)
     OPTION("autoCloseIdleDaemon"         ,Bool               ( false         )),
 #endif
-    OPTION("startupLaunch"               ,Bool               ( false         )),
+    OPTION("startupLaunch"               ,Bool               ( true         )),
     OPTION("showStartupLaunchMessage"    ,Bool               ( true          )),
     OPTION("copyURLAfterUpload"          ,Bool               ( true          )),
     OPTION("copyPathAfterSave"           ,Bool               ( false         )),
@@ -144,6 +144,7 @@ static QMap<QString, QSharedPointer<KeySequence>> recognizedShortcuts = {
     SHORTCUT("TYPE_ACCEPT"              ,   "Return"                ),
     SHORTCUT("TYPE_EXIT"                ,   "Ctrl+Q"                ),
     SHORTCUT("TYPE_IMAGEUPLOADER"       ,                           ),
+    SHORTCUT("TYPE_COPYTRANSLATE"       ,   "F"                     ),
 #if !defined(Q_OS_MACOS)
     SHORTCUT("TYPE_OPEN_APP"            ,   "Ctrl+O"                ),
 #endif
